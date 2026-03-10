@@ -105,9 +105,9 @@
             let fBase = calcBaseForca(j.gp, j.gc);
             let bonus = 0; let bTag = "";
             
-            if(i === 0) { bonus = 10; bTag = '<span class="bonus-tag" style="background:var(--gold); color:#000">+10 LÍDER</span>'; }
-            else if(i === 1) { bonus = 5; bTag = '<span class="bonus-tag" style="background:var(--silver); color:#000">+5 VICE</span>'; }
-            else if(i === 2) { bonus = 2; bTag = '<span class="bonus-tag" style="background:var(--bronze); color:#000">+2 TOP3</span>'; }
+            if(i === 0) { bonus = 20; bTag = '<span class="bonus-tag" style="background:var(--gold); color:#000">+10 LÍDER</span>'; }
+            else if(i === 1) { bonus = 10; bTag = '<span class="bonus-tag" style="background:var(--silver); color:#000">+5 VICE</span>'; }
+            else if(i === 2) { bonus = 5; bTag = '<span class="bonus-tag" style="background:var(--bronze); color:#000">+2 TOP3</span>'; }
             else if(i === list.length-1 && list.length > 3) { bonus = -5; bTag = '<span class="bonus-tag" style="background:var(--danger); color:#fff">-5 ZONA</span>'; }
 
             return `<tr><td>${i+1}º</td><td class="player-info"><img src="${j.foto||''}" class="club-img"><b>${j.tecnico}</b>${bTag}</td><td>${pts}</td><td>${j.v}</td><td>${j.e}</td><td>${j.d}</td><td>${j.gp}</td><td>${j.gc}</td><td>${apr}%</td><td style="color:var(--gold); font-weight:bold">${(fBase + bonus).toFixed(1)}</td></tr>`;
